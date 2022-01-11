@@ -10,14 +10,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
-
-  <body>
-    <header><h1>Glenda the Good Grocery List</h1><h3>Grocery List Expert, Nutrition, Data Analyst</h3></header>
+  <!-- 1.mvp then 
+    2.meal plan 
+    3.then list -->
+  <div>
+    <header><h1 id="header-h1">Glenda the Good Grocery List</h1><h3 id="header-h3">Grocery List Expert, Nutrition, Data Analyst</h3></header>
 
     <!-- when each of buttons are pushed hide 2 of the screens it be meal planner,grocery or user input but ALL buttons stay visible at all times-->
-    <button id="user-input">UI</button>
+    <button id="user-input">User Input</button>
     <section>
-      <label for="day">Day of the Week</label>
+     <label id="label" for="day">Day of the Week</label>
       <select name="day" id="days">
         <option value="mon">Monday</option>
         <option value="tue">Tuesday</option>
@@ -27,6 +29,7 @@
         <option value="sat">Saturday</option>
         <option value="sun">Sunday</option>
       </select>
+    </div>
     </section>
     <button id="meal-planner">Meal Planner</button>
     <section></section>

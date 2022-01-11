@@ -1,0 +1,28 @@
+#header-h1 {
+   text-align: center;
+} 
+
+#header-h3 {
+    text-align: center;
+}
+
+header {
+    background-color: rgb(164, 197, 132);
+}
+
+#user-input {
+    background-color: rgb(54, 228, 132);
+    display: flex;
+    width: 75px;
+    border: 2px solid rgb(3, 15, 3);
+    padding: 5px;
+     margin: 20px;
+}
+
+#label{
+    background-color: rgb(54, 228, 
+
+}
+
+
+
