@@ -29,7 +29,7 @@ searchForm.addEventListener(`submit`, (e) => {
     fetchAPI();
 });
 async function fetchAPI (){
-    const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${API_KEY}&to=20`;
+    const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${API_KEY}&to=1`;
     const response = await fetch(baseURL);
     const data = await response.json();
     generateHTML(data.hits);
@@ -64,7 +64,7 @@ function generateHTML(results){
                     <div class="dropdown">
                         <div class="dropdown-trigger">
                             <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                                <span>Pick this Recipe</span>
+                                <span>Add this Recipe</span>
                                 <span class="icon is-small">
                                     <i class="fas fa-angle-down" aria-hidden="true"></i>
                                 </span>
