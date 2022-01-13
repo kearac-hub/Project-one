@@ -1,1 +1,168 @@
+<<<<<<< HEAD
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA Compatible" content="IE-Edge" />                                                                                 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>G.L.E.N.D.A</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <script src="https://kit.fontawesome.com/457a2699b6.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./assets/style.css" />
+    </head>
+    <body>
+        <section class="hero is-small is-primary has-text-centered">
+            <div class="hero-body">
+                <p class="title">G.L.E.N.D.A, the Good Grocery List</p>
+                <p class="subtitle">Grocery List Export, Nutritional Data Analyst</p>
+            </div>            
+        </section>
+        <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-dark">
+                            <span class="icon">
+                            <i class="fas fa-search"></i>
+                            </span>
+                            <span>Recipe Finder</span>
+                        </a>                        
+                        <a class="button is-dark">
+                            <span class="icon">
+                            <i class="fas fa-calendar-week"></i>
+                            </span>
+                            <span>Meal Planner</span>
+                        </a>
+                        <a class="button is-dark">
+                            <span class="icon">
+                            <i class="fas fa-list"></i>
+                            </span>
+                            <span>Grocery List</span>
+                        </a>
+                        <a class="button is-dark">
+                            <span class="icon">
+                            <i class="fas fa-users-cog"></i>
+                            </span>
+                            <span>Settings</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="has-text-centered">
+        <div class="columns recipe-finder is-sticky">
+            <div class="column is-one-fifth">
+                <div class="tile is-child box sticky-top">
+                    <form> 
+                        <input type="text" placeholder="Search for Recipes">
+                    </form><br><br>                   
+                    <p class="subtitle">Diet Options</p>
+                    <ul>
+                        <i>
+                            <input type="checkbox" id="pref-vegt" name="vegatarian" value="vegatarian">
+                            <label for="pref-vegt">Vegetarian</label> 
+                        </i><br>
+                        <i>
+                            <input type="checkbox" id="pref-vega" name="vegan" value="vegan">
+                            <label for="pref-vega">Vegan</label>
+                        </i><br>
+                        <i>
+                            <input type="checkbox" id="pref-pesc" name="pescatarian" value="pescatarian">
+                            <label for="pref-pesc">Pescatarian</label>
+                        </i><br>
+                    </ul>
+                </div>
+            </div>
+            <div class="column is-half box has-text-centered">
+                <p class="title">Your Recipe Results:</p>
+                <div class="columns is-multiline search-result">
+                    <div class="item"></div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="sc-week sticky-top">
+                    <div class="tile is-child box monday">
+                        <p>Monday</p>
+                    </div>
+                    <div class="tile is-child box tuesday">
+                        <p>Tuesday</p>
+                    </div>
+                    <div class="tile is-child box wednesday">
+                        <p>Wednesday</p>
+                    </div>
+                    <div class="tile is-child box thursday">
+                        <p>Thursday</p>
+                    </div>
+                    <div class="tile is-child box friday">
+                        <p>Friday</p>
+                    </div>
+                    <div class="tile is-child box saturday">
+                        <p>Saturday</p>
+                    </div>
+                    <div class="tile is-child box sunday">
+                        <p>Sunday</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container meal-planner">
+            <div class="columns mp-week">
+                <div class="column box is-dark monday">
+                    <p class="title">Monday</p>
+                </div>
+                <div class="column box is-dark tuesday">
+                    <p class="title">Tuesday</p>
+                </div>
+                <div class="column box wednesday">
+                    <p class="title">Wednesday</p>
+                </div>
+                <div class="column box thursday">
+                    <p class="title">Thursday</p>
+                </div>
+                <div class="column box friday">
+                    <p class="title">Friday</p>
+                </div>
+                <div class="column box saturday">
+                    <p class="title">Saturday</p>
+                </div>
+                <div class="column box sunday">
+                    <p class="title">Sunday</p>
+                </div>
+            </div>
+        </div>
+        <div class="container grocery-list">
+            <div class="columns">
+                <div class="column box">
+                    <p class="title">Ingredient Name</p>
+                    <div id="ing-name"></div>
+                </div>
+                <div class="column box">
+                    <p class="title">Quantity Needed</p>
+                    <div id="ing-qnty"></div>
+                </div>
+                <div class="column box">
+                    <p class="title">Checklist</p>
+                    <div id="ing-check"></div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>Made with frustration and love by Dan, Heather, and Keara</p>
+        </footer>
+        </div>
+        <script src="assets/script.js"></script>
+    </body>
+</html>
+>>>>>>> main
