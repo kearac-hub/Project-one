@@ -15,9 +15,9 @@
 
 // https://api.spoonacular.com/recipes/random?apiKey=7226009885d74cf5ba75e4d9352df82a&number=1
 
-const searchForm = document.querySelector(`form`);
-const searchResults = document.querySelector(`.search-result`);
-const container = document.querySelector(`.container`);
+const searchForm = document.querySelector('form');
+const searchResults = document.querySelector('.search-result');
+const container = document.querySelector('.container');
 var searchQuery = ``;
 const APP_ID = `d3e5c6fd`
 const API_KEY = `c628a4d256c9e32f0138ceafb1591933`
@@ -40,15 +40,48 @@ function generateHTML(results){
     results.map(result => {
         generatedHTML +=
         `
-         <div class="item">
+        <div class="item tile is-child box">
             <img src="${result.recipe.image}" alt="Image of the Recipe">
-             <div class="flex-container">
-                <h1 class="title">${result.recipe.label}</h1>
-                <a class="view button" target="_blank" href="${result.recipe.url}">
-                <button>View Recipe</button>
-                </a>
-             </div>
             <p class="item-data">Calories:${result.recipe.calories.toFixed(0)} Servings:${result.recipe.yield}</p>
+                <h1 class="title">${result.recipe.label}</h1>
+                <a class="button is-dark" target="_blank" href="${result.recipe.url}">
+                    <span>Get Recipe</span>
+                </a>
+                <div class="dropdown">
+                    <div class="dropdown-trigger">
+                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                            <span>Pick this Recipe</span>
+                            <span class="icon is-small">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                        <div class="dropdown-content">
+                            <a class="dropdown-item monday-dd">
+                                Monday
+                            </a>
+                            <a class="dropdown-item tuesday-dd">
+                                Tuesday
+                            </a>
+                            <a class="dropdown-item wednesday-dd">
+                                Wednesday
+                            </a>
+                            <a href="#" class="dropdown-item thursday-dd">
+                                Thursday
+                            </a>
+                            <a class="dropdown-item friday-dd">
+                                Friday
+                            </a>
+                            <a class="dropdown-item saturday-dd">
+                                Saturday
+                            </a>
+                            <a class="dropdown-item sunday-dd">
+                                Sunday
+                            </a>
+                        </div>
+                    </div>
+                </div>          
         </div>
         `
     })

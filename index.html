@@ -1,25 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Glenda The Good Grocery List</title>             
-    <link rel="stylesheet" href="./Assets/style.css">
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA Compatible" content="IE-Edge" />                                                                                 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>G.L.E.N.D.A</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+        <script src="https://kit.fontawesome.com/457a2699b6.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./assets/stylesheets/style.css" />
+    </head>
+    <body>
+        <section class="hero is-small is-primary has-text-centered">
+            <div class="hero-body">
+                <p class="title">G.L.E.N.D.A, the Good Grocery List</p>
+                <p class="subtitle">Grocery List Export, Nutritional Data Analyst</p>
+            </div>            
+        </section>
+        <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-dark">
+                            <span class="icon">
+                            <i class="fas fa-search"></i>
+                            </span>
+                            <span>Recipe Finder</span>
+                        </a>                        
+                        <a class="button is-dark">
+                            <span class="icon">
+                            <i class="fas fa-calendar-week"></i>
+                            </span>
+                            <span>Meal Planner</span>
+                        </a>
+                        <a class="button is-dark">
+                            <span class="icon">
+                            <i class="fas fa-list"></i>
+                            </span>
+                            <span>Grocery List</span>
+                        </a>
+                        <a class="button is-dark">
+                            <span class="icon">
+                            <i class="fas fa-users-cog"></i>
+                            </span>
+                            <span>Settings</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container has-text-centered">
+        <div class="columns recipe-finder">
+            <div class="column is-one-fifth">
+                <div class="tile is-child box">
+                    <form>
+                        <input type="text" placeholder="Search for Recipes">
+                    </form><br><br>                   
+                    <p class="subtitle">Diet Options</p>
+                    <ul>
+                        <i>
+                            <input type="checkbox" id="pref-vegt" name="vegatarian" value="vegatarian">
+                            <label for="pref-vegt">Vegetarian</label> 
+                        </i><br>
+                        <i>
+                            <input type="checkbox" id="pref-vega" name="vegan" value="vegan">
+                            <label for="pref-vega">Vegan</label>
+                        </i><br>
+                        <i>
+                            <input type="checkbox" id="pref-pesc" name="pescatarian" value="pescatarian">
+                            <label for="pref-pesc">Pescatarian</label>
+                        </i><br>
+                    </ul>
+                </div>
+            </div>
+            <div class="column is-half box has-text-centered">
+                <p class="title">Your Recipe Results:</p>
+                <div class="search-result">
+                    <div class="item"></div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="tile is-child box monday">
+                    <p>Monday</p>
+                </div>
+                <div class="tile is-child box tuesday">
+                    <p>Tuesday</p>
+                </div>
+                <div class="tile is-child box wednesday">
+                    <p>Wednesday</p>
+                </div>
+                <div class="tile is-child box thursday">
+                    <p>Thursday</p>
+                </div>
+                <div class="tile is-child box friday">
+                    <p>Friday</p>
+                </div>
+                <div class="tile is-child box saturday">
+                    <p>Saturday</p>
+                </div>
+                <div class="tile is-child box sunday">
+                    <p>Sunday</p>
+                </div>
+            </div>
+        </div>
+        <div class="meal-planner">
 
-  <body>
-    <div class="container">
-      <h1 class="brand">Glenda</h1>
-      <form>
-        <Input type="text" placeholder="Search For Recipes..."></Input>
-      </form>
-    </div>
-    <div class="search-result">
-      <div class="item">
-      </div>
-    </div>
-  <footer>Made with frustration and love by Dan, Heather,& Keara</footer>
-  <script src="./Assets/script.js"></script>
-  </body>
+        </div>
+        <div class="grocery-list">
+
+        </div>
+        <footer>
+            <p>Made with frustration and love by Dan, Heather, and Keara</p>
+        </footer>
+        </div>
+        <script src="assets/scripts/script.js"></script>
+    </body>
 </html>
