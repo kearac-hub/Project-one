@@ -42,7 +42,7 @@ function generateHTML(results){
         `
         <div class="item tile is-child box">
             <img src="${result.recipe.image}" alt="Image of the Recipe">
-            <p class="item-data">Calories:${result.recipe.calories.toFixed(0)} Servings:${result.recipe.yield}</p>
+            <p class="item-data">Calories: ${result.recipe.calories.toFixed(0)} Servings: ${result.recipe.yield} Total Time: ${result.recipe.totalTime} minutes. </p>
                 <h1 class="title">${result.recipe.label}</h1>
                 <a class="button is-dark" target="_blank" href="${result.recipe.url}">
                     <span>Get Recipe</span>
