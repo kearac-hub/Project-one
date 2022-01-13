@@ -58,11 +58,11 @@
                 </div>
             </div>
         </nav>
-        <div class="container has-text-centered">
-        <div class="columns recipe-finder">
+        <div class="has-text-centered">
+        <div class="columns recipe-finder is-sticky">
             <div class="column is-one-fifth">
-                <div class="tile is-child box">
-                    <form>
+                <div class="tile is-child box sticky-top">
+                    <form> 
                         <input type="text" placeholder="Search for Recipes">
                     </form><br><br>                   
                     <p class="subtitle">Diet Options</p>
@@ -84,34 +84,62 @@
             </div>
             <div class="column is-half box has-text-centered">
                 <p class="title">Your Recipe Results:</p>
-                <div class="search-result">
+                <div class="columns is-multiline search-result">
                     <div class="item"></div>
                 </div>
             </div>
             <div class="column">
-                <div class="tile is-child box monday">
-                    <p>Monday</p>
-                </div>
-                <div class="tile is-child box tuesday">
-                    <p>Tuesday</p>
-                </div>
-                <div class="tile is-child box wednesday">
-                    <p>Wednesday</p>
-                </div>
-                <div class="tile is-child box thursday">
-                    <p>Thursday</p>
-                </div>
-                <div class="tile is-child box friday">
-                    <p>Friday</p>
-                </div>
-                <div class="tile is-child box saturday">
-                    <p>Saturday</p>
-                </div>
-                <div class="tile is-child box sunday">
-                    <p>Sunday</p>
+                <div class="sc-week sticky-top">
+                    <div class="tile is-child box monday">
+                        <p>Monday</p>
+                    </div>
+                    <div class="tile is-child box tuesday">
+                        <p>Tuesday</p>
+                    </div>
+                    <div class="tile is-child box wednesday">
+                        <p>Wednesday</p>
+                    </div>
+                    <div class="tile is-child box thursday">
+                        <p>Thursday</p>
+                    </div>
+                    <div class="tile is-child box friday">
+                        <p>Friday</p>
+                    </div>
+                    <div class="tile is-child box saturday">
+                        <p>Saturday</p>
+                    </div>
+                    <div class="tile is-child box sunday">
+                        <p>Sunday</p>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="container meal-planner">
+            <div class="columns mp-week">
+                <div class="column box is-dark monday">
+                    <p class="title">Monday</p>
+                </div>
+                <div class="column box is-dark tuesday">
+                    <p class="title">Tuesday</p>
+                </div>
+                <div class="column box wednesday">
+                    <p class="title">Wednesday</p>
+                </div>
+                <div class="column box thursday">
+                    <p class="title">Thursday</p>
+                </div>
+                <div class="column box friday">
+                    <p class="title">Friday</p>
+                </div>
+                <div class="column box saturday">
+                    <p class="title">Saturday</p>
+                </div>
+                <div class="column box sunday">
+                    <p class="title">Sunday</p>
+                </div>
+            </div>
+        </div>
+<<<<<<< HEAD
         <div class="meal-planner">
 
   <body>
@@ -129,4 +157,28 @@
   <footer>Made with frustration and love by Dan, Heather,& Keara</footer>
   <script src="./Assets/script.js"></script>
   </body>
+=======
+        <div class="container grocery-list">
+            <div class="columns">
+                <div class="column box">
+                    <p class="title">Ingredient Name</p>
+                    <div id="ing-name"></div>
+                </div>
+                <div class="column box">
+                    <p class="title">Quantity Needed</p>
+                    <div id="ing-qnty"></div>
+                </div>
+                <div class="column box">
+                    <p class="title">Checklist</p>
+                    <div id="ing-check"></div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>Made with frustration and love by Dan, Heather, and Keara</p>
+        </footer>
+        </div>
+        <script src="assets/script.js"></script>
+    </body>
+>>>>>>> main
 </html>

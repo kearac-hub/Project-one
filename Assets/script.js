@@ -40,6 +40,7 @@ function generateHTML(results){
     results.map(result => {
         generatedHTML +=
         `
+<<<<<<< HEAD
         <div class="item tile is-child box">
             <img src="${result.recipe.image}" alt="Image of the Recipe">
             <p class="item-data">Calories: ${result.recipe.calories.toFixed(0)} Servings: ${result.recipe.yield} Total Time: ${result.recipe.totalTime} minutes. </p>
@@ -55,33 +56,66 @@ function generateHTML(results){
                                 <i class="fas fa-angle-down" aria-hidden="true"></i>
                             </span>
                         </button>
+=======
+        <div class="item column is-one-half ">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title">
+                    ${result.recipe.label}
+                    </p>
+                </header>
+                <div class="card image">
+                    <figure class="image is-4by3">
+                        <img src="${result.recipe.image}" alt="Image of the Recipe">
+                    </figure>
+                </div>
+                <div class="card-content">
+                    <div class="content">
+                        <p class="item-data">Calories:${result.recipe.calories.toFixed(0)} Servings:${result.recipe.yield}</p>
+>>>>>>> main
                     </div>
-                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                        <div class="dropdown-content">
-                            <a class="dropdown-item monday-dd">
-                                Monday
-                            </a>
-                            <a class="dropdown-item tuesday-dd">
-                                Tuesday
-                            </a>
-                            <a class="dropdown-item wednesday-dd">
-                                Wednesday
-                            </a>
-                            <a href="#" class="dropdown-item thursday-dd">
-                                Thursday
-                            </a>
-                            <a class="dropdown-item friday-dd">
-                                Friday
-                            </a>
-                            <a class="dropdown-item saturday-dd">
-                                Saturday
-                            </a>
-                            <a class="dropdown-item sunday-dd">
-                                Sunday
-                            </a>
+                </div>
+                <div class="card-footer">
+                    <a class="button is-dark" target="_blank" href="${result.recipe.url}">
+                        <span>Get Recipe</span>
+                    </a>
+                    <div class="dropdown">
+                        <div class="dropdown-trigger">
+                            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                                <span>Pick this Recipe</span>
+                                <span class="icon is-small">
+                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </div><br><br>
+                        <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <a class="dropdown-item monday-dd">
+                                    Monday
+                                </a>
+                                <a class="dropdown-item tuesday-dd">
+                                    Tuesday
+                                </a>
+                                <a class="dropdown-item wednesday-dd">
+                                    Wednesday
+                                </a>
+                                <a href="#" class="dropdown-item thursday-dd">
+                                    Thursday
+                                </a>
+                                <a class="dropdown-item friday-dd">
+                                    Friday
+                                </a>
+                                <a class="dropdown-item saturday-dd">
+                                    Saturday
+                                </a>
+                                <a class="dropdown-item sunday-dd">
+                                    Sunday
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>          
+                </div>
+            </div>          
         </div>
         `
     })
