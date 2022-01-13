@@ -40,23 +40,6 @@ function generateHTML(results){
     results.map(result => {
         generatedHTML +=
         `
-<<<<<<< HEAD
-        <div class="item tile is-child box">
-            <img src="${result.recipe.image}" alt="Image of the Recipe">
-            <p class="item-data">Calories: ${result.recipe.calories.toFixed(0)} Servings: ${result.recipe.yield} Total Time: ${result.recipe.totalTime} minutes. </p>
-                <h1 class="title">${result.recipe.label}</h1>
-                <a class="button is-dark" target="_blank" href="${result.recipe.url}">
-                    <span>Get Recipe</span>
-                </a>
-                <div class="dropdown">
-                    <div class="dropdown-trigger">
-                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                            <span>Pick this Recipe</span>
-                            <span class="icon is-small">
-                                <i class="fas fa-angle-down" aria-hidden="true"></i>
-                            </span>
-                        </button>
-=======
         <div class="item column is-one-half ">
             <div class="card">
                 <header class="card-header">
@@ -72,7 +55,6 @@ function generateHTML(results){
                 <div class="card-content">
                     <div class="content">
                         <p class="item-data">Calories:${result.recipe.calories.toFixed(0)} Servings:${result.recipe.yield}</p>
->>>>>>> main
                     </div>
                 </div>
                 <div class="card-footer">
