@@ -29,7 +29,7 @@ searchForm.addEventListener(`submit`, (e) => {
     fetchAPI();
 });
 async function fetchAPI (){
-    const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${API_KEY}&to=1`;
+    const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${API_KEY}&to=20`;
     const response = await fetch(baseURL);
     const data = await response.json();
     generateHTML(data.hits);
@@ -147,3 +147,5 @@ var item = jokeObj.results[Math.floor(Math.random()*jokeObj.results.length)];
 console.log(item.joke)
 jokeText.innerHTML = item.joke;
 }
+
+// when next or previous buttons pressed then inject next set of recipe results
