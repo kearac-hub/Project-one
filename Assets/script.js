@@ -69,7 +69,7 @@ function generateHTML(results){
                                     <i class="fas fa-angle-down" aria-hidden="true"></i>
                                 </span>
                             </button>
-                        </div><br><br>
+                        </div>
                         <div class="dropdown-menu" id="dropdown-menu" role="menu">
                             <div class="dropdown-content">
                                 <a class="dropdown-item monday-dd">
@@ -103,6 +103,27 @@ function generateHTML(results){
         `
     })
     searchResults.innerHTML = generatedHTML;
+
+    var dropdowns = document.querySelectorAll('.dropdown');
+
+    if (dropdowns.length > 0) {
+        dropdowns.forEach(function (el) {
+        el.addEventListener('click', function (event) {
+            event.stopPropagation();
+            el.classList.toggle('is-active');
+        });
+        });
+
+        document.addEventListener('click', function (event) {
+        closeDropdowns();
+        });
+    }
+
+    function closeDropdowns() {
+        dropdowns.forEach(function (el) {
+        el.classList.remove('is-active');
+        });
+    }
 };
 
 
