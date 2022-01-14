@@ -94,6 +94,7 @@ function generateHTML(results){
                                     Sunday
                                 </a>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -102,4 +103,26 @@ function generateHTML(results){
         `
     })
     searchResults.innerHTML = generatedHTML;
+};
+
+
+// joke button
+// fetch(`https://api.humorapi.com/jokes/random?api-key=0d50a753058142d38f0460a1d4ef5de2&include-tags=food&exclude-tags=NSFW,dark`)
+
+const jokeText = document.querySelector(`#joke`);
+const jokeBTN = document.querySelector(`#jokeButton`);
+
+jokeBTN.addEventListener("click", GetJoke)
+
+async function GetJoke(){
+var jokeData = await fetch(`https://icanhazdadjoke.com/search?term=food`, {
+    headers: {
+        Accept: `application/json`
+    }
+});
+
+var jokeObj = await jokeData.json();
+var item = jokeObj.results[Math.floor(Math.random()*jokeObj.results.length)];
+console.log(item.joke)
+jokeText.innerHTML = item.joke;
 }
