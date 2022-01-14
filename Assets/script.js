@@ -29,7 +29,7 @@ searchForm.addEventListener(`submit`, (e) => {
     fetchAPI();
 });
 async function fetchAPI (){
-    const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${API_KEY}&to=20`;
+    const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${API_KEY}&to=1`;
     const response = await fetch(baseURL);
     const data = await response.json();
     generateHTML(data.hits);
@@ -64,12 +64,12 @@ function generateHTML(results){
                     <div class="dropdown">
                         <div class="dropdown-trigger">
                             <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                                <span>Pick this Recipe</span>
+                                <span>Add this Recipe</span>
                                 <span class="icon is-small">
                                     <i class="fas fa-angle-down" aria-hidden="true"></i>
                                 </span>
                             </button>
-                        </div><br><br>
+                        </div>
                         <div class="dropdown-menu" id="dropdown-menu" role="menu">
                             <div class="dropdown-content">
                                 <a class="dropdown-item monday-dd">
@@ -94,6 +94,7 @@ function generateHTML(results){
                                     Sunday
                                 </a>
                             </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -102,4 +103,47 @@ function generateHTML(results){
         `
     })
     searchResults.innerHTML = generatedHTML;
+
+    var dropdowns = document.querySelectorAll('.dropdown');
+
+    if (dropdowns.length > 0) {
+        dropdowns.forEach(function (el) {
+        el.addEventListener('click', function (event) {
+            event.stopPropagation();
+            el.classList.toggle('is-active');
+        });
+        });
+
+        document.addEventListener('click', function (event) {
+        closeDropdowns();
+        });
+    }
+
+    function closeDropdowns() {
+        dropdowns.forEach(function (el) {
+        el.classList.remove('is-active');
+        });
+    }
+};
+
+
+// joke button
+// fetch(`https://api.humorapi.com/jokes/random?api-key=0d50a753058142d38f0460a1d4ef5de2&include-tags=food&exclude-tags=NSFW,dark`)
+
+const jokeText = document.querySelector(`#joke`);
+const jokeBTN = document.querySelector(`#jokeButton`);
+
+jokeBTN.addEventListener("click", GetJoke)
+
+async function GetJoke(){
+var jokeData = await fetch(`https://icanhazdadjoke.com/search?term=food`, {
+    headers: {
+        Accept: `application/json`
+    }
+});
+
+var jokeObj = await jokeData.json();
+var item = jokeObj.results[Math.floor(Math.random()*jokeObj.results.length)];
+console.log(item.joke)
+jokeText.innerHTML = item.joke;
 }
