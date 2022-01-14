@@ -65,27 +65,13 @@
             <br>
         </div>
         <div class="has-text-centered">
-        <div class="columns recipe-finder is-sticky">
+        <div class="columns recipe-finder">
             <div class="column is-one-fifth">
                 <div class="tile is-child box sticky-top">
+                    <p class="title">Search for Recipes:</p>
                     <form> 
-                        <input type="text" placeholder="Search for Recipes">
-                    </form><br><br>                   
-                    <p class="subtitle">Diet Options</p>
-                    <ul>
-                        <i>
-                            <input type="checkbox" id="pref-vegt" name="vegatarian" value="vegatarian">
-                            <label for="pref-vegt">Vegetarian</label> 
-                        </i><br>
-                        <i>
-                            <input type="checkbox" id="pref-vega" name="vegan" value="vegan">
-                            <label for="pref-vega">Vegan</label>
-                        </i><br>
-                        <i>
-                            <input type="checkbox" id="pref-pesc" name="pescatarian" value="pescatarian">
-                            <label for="pref-pesc">Pescatarian</label>
-                        </i><br>
-                    </ul>
+                        <input type="text" placeholder="Hungry?">
+                    </form>
                 </div>
             </div>
             <div class="column is-half box has-text-centered">
@@ -93,6 +79,10 @@
                 <div class="columns is-multiline search-result">
                     <div class="item"></div>
                 </div>
+                <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+                    <a class="pagination-previous hidden">Previous</a>
+                    <a class="pagination-next">Next page</a>
+                </nav>
             </div>
             <div class="column">
                 <div class="sc-week sticky-top">
