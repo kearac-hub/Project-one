@@ -72,27 +72,27 @@ function generateHTML(results){
                         </div>
                         <div class="dropdown-menu" id="dropdown-menu" role="menu">
                             <div class="dropdown-content">
-                                <a class="dropdown-item monday-dd">
-                                    Monday
-                                </a>
-                                <a class="dropdown-item tuesday-dd">
-                                    Tuesday
-                                </a>
-                                <a class="dropdown-item wednesday-dd">
-                                    Wednesday
-                                </a>
-                                <a href="#" class="dropdown-item thursday-dd">
-                                    Thursday
-                                </a>
-                                <a class="dropdown-item friday-dd">
-                                    Friday
-                                </a>
-                                <a class="dropdown-item saturday-dd">
-                                    Saturday
-                                </a>
-                                <a class="dropdown-item sunday-dd">
-                                    Sunday
-                                </a>
+                                <div class="dropdown-item">
+                                    <input class="button is-white is-fullwidth" type="button" value="Monday">
+                                </div>
+                                <div class="dropdown-item">
+                                    <input class="button is-white is-fullwidth" type="button" value="Tuesday">
+                                </div>
+                                <div class="dropdown-item">
+                                    <input class="button is-white is-fullwidth" type="button" value="Wednesday">
+                                </div>
+                                <div class="dropdown-item">
+                                    <input class="button is-white is-fullwidth" type="button" value="Thursday">
+                                </div>
+                                <div class="dropdown-item">
+                                    <input class="button is-white is-fullwidth" type="button" value="Friday">
+                                </div>
+                                <div class="dropdown-item">
+                                    <input class="button is-white is-fullwidth" type="button" value="Saturday">
+                                </div>
+                                <div class="dropdown-item">
+                                    <input class="button is-white is-fullwidth" type="button" value="Sunday">
+                                </div>
                             </div>
                             
                         </div>
