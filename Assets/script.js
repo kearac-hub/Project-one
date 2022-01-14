@@ -69,30 +69,30 @@ function generateHTML(results){
                                     <i class="fas fa-angle-down" aria-hidden="true"></i>
                                 </span>
                             </button>
-                        </div><br><br>
+                        </div>
                         <div class="dropdown-menu" id="dropdown-menu" role="menu">
                             <div class="dropdown-content">
-                                <a class="dropdown-item monday-dd">
-                                    Monday
-                                </a>
-                                <a class="dropdown-item tuesday-dd">
-                                    Tuesday
-                                </a>
-                                <a class="dropdown-item wednesday-dd">
-                                    Wednesday
-                                </a>
-                                <a href="#" class="dropdown-item thursday-dd">
-                                    Thursday
-                                </a>
-                                <a class="dropdown-item friday-dd">
-                                    Friday
-                                </a>
-                                <a class="dropdown-item saturday-dd">
-                                    Saturday
-                                </a>
-                                <a class="dropdown-item sunday-dd">
-                                    Sunday
-                                </a>
+                                <div class="dropdown-item">
+                                    <input class="button is-white is-fullwidth" type="button" value="Monday">
+                                </div>
+                                <div class="dropdown-item">
+                                    <input class="button is-white is-fullwidth" type="button" value="Tuesday">
+                                </div>
+                                <div class="dropdown-item">
+                                    <input class="button is-white is-fullwidth" type="button" value="Wednesday">
+                                </div>
+                                <div class="dropdown-item">
+                                    <input class="button is-white is-fullwidth" type="button" value="Thursday">
+                                </div>
+                                <div class="dropdown-item">
+                                    <input class="button is-white is-fullwidth" type="button" value="Friday">
+                                </div>
+                                <div class="dropdown-item">
+                                    <input class="button is-white is-fullwidth" type="button" value="Saturday">
+                                </div>
+                                <div class="dropdown-item">
+                                    <input class="button is-white is-fullwidth" type="button" value="Sunday">
+                                </div>
                             </div>
                             
                         </div>
@@ -103,6 +103,27 @@ function generateHTML(results){
         `
     })
     searchResults.innerHTML = generatedHTML;
+
+    var dropdowns = document.querySelectorAll('.dropdown');
+
+    if (dropdowns.length > 0) {
+        dropdowns.forEach(function (el) {
+        el.addEventListener('click', function (event) {
+            event.stopPropagation();
+            el.classList.toggle('is-active');
+        });
+        });
+
+        document.addEventListener('click', function (event) {
+        closeDropdowns();
+        });
+    }
+
+    function closeDropdowns() {
+        dropdowns.forEach(function (el) {
+        el.classList.remove('is-active');
+        });
+    }
 };
 
 
@@ -126,3 +147,5 @@ var item = jokeObj.results[Math.floor(Math.random()*jokeObj.results.length)];
 console.log(item.joke)
 jokeText.innerHTML = item.joke;
 }
+
+// when next or previous buttons pressed then inject next set of recipe results
