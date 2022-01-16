@@ -13,7 +13,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
         <script src="https://kit.fontawesome.com/457a2699b6.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="./assets/style.css" />
+        <link rel="stylesheet" href="./Assets/style.css" />
     </head>
     <body>
         <section class="hero is-small is-primary has-text-centered">
@@ -61,28 +61,20 @@
                 </div>
             </div>
         </nav>
+        <div>
+            <p>Would you like to hear a joke? <button id="jokeButton">Press for a joke!</button>
+            </p>
+            <p id="joke"></p>
+            <br>
+        </div>
         <div class="has-text-centered">
-        <div class="columns recipe-finder is-sticky">
+        <div class="columns recipe-finder">
             <div class="column is-one-fifth">
                 <div class="tile is-child box sticky-top">
+                    <p class="title">Search for Recipes:</p>
                     <form> 
-                        <input type="text" placeholder="Search for Recipes">
-                    </form><br><br>                   
-                    <p class="subtitle">Diet Options</p>
-                    <ul>
-                        <i>
-                            <input type="checkbox" id="pref-vegt" name="vegatarian" value="vegatarian">
-                            <label for="pref-vegt">Vegetarian</label> 
-                        </i><br>
-                        <i>
-                            <input type="checkbox" id="pref-vega" name="vegan" value="vegan">
-                            <label for="pref-vega">Vegan</label>
-                        </i><br>
-                        <i>
-                            <input type="checkbox" id="pref-pesc" name="pescatarian" value="pescatarian">
-                            <label for="pref-pesc">Pescatarian</label>
-                        </i><br>
-                    </ul>
+                        <input type="text" placeholder="Hungry?">
+                    </form>
                 </div>
             </div>
             <div class="column is-half box has-text-centered">
@@ -90,6 +82,10 @@
                 <div class="columns is-multiline search-result">
                     <div class="item"></div>
                 </div>
+                <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+                    <a class="pagination-previous hidden">Previous</a>
+                    <a class="pagination-next">Next page</a>
+                </nav>
             </div>
             <div class="column">
                 <div class="sc-week sticky-top">
@@ -162,7 +158,7 @@
             <p>Made with frustration and love by Dan, Heather, and Keara</p>
         </footer>
         </div>
-        <script src="assets/script.js"></script>
+        <script src="./Assets/script.js"></script>
     </body>
 </html>
 >>>>>>> main
