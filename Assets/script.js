@@ -56,7 +56,7 @@ function generateHTML(results){
                 </div>
                 <div class="card-content">
                     <div class="content">
-                        <p class="item-data">Calories:${result.recipe.calories.toFixed(0)} Servings:${result.recipe.yield}</p>
+                        <p class="item-data">Cook Time: ${result.recipe.totalTime} min Servings:${result.recipe.yield}</p>
                     </div>
                 </div>
                 <div class="card-footer">
@@ -201,29 +201,26 @@ function updateDay(day) {
         var weekSlot = document.getElementById("mp-"+day)
         sideSlot.innerHTML += `<p class="subtitle"> ${daysRecipe.label} </p>`
         weekSlot.innerHTML +=         `
-        <div class="item column is-one-half ">
-            <div class="card">
-                <header class="card-header">
-                    <p class="card-header-title recipe-label">
-                    ${daysRecipe.label}
-                    </p>
-                </header>
-                <div class="card image">
-                    <figure class="image is-4by3">
-                        <img src="${daysRecipe.image}" alt="Image of the Recipe">
+        <div class="box">
+            <article class="media">
+                <div class="media-left">
+                    <figure class="image is-128x128">
+                        <img src="${daysRecipe.image}" alt="Image of the Recipe"}>
                     </figure>
                 </div>
-                <div class="card-content">
+                <div class="media-content">
                     <div class="content">
-                        <p class="item-data">Calories:${daysRecipe.calories.toFixed(0)} Servings:${daysRecipe.yield}</p>
+                        <p class="subtitle">${daysRecipe.label}</p>
+                        <p>Cooktime:${daysRecipe.totalTime}</p>
+                        <p>Calories:${daysRecipe.calories.toFixed(0)} Servings:${daysRecipe.yield}</p>
                     </div>
                 </div>
-                <div class="card-footer has-text-centered">
+                <nav class="level">
                     <a class="button is-dark" target="_blank" href="${daysRecipe.url}">
                         <span>View Recipe</span>
                     </a>
-                </div>
-            </div>          
+                </nav>
+            </article>          
         </div>
         `
         }
