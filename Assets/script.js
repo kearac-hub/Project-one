@@ -199,8 +199,9 @@ function updateDay(day) {
         var daysRecipe = JSON.parse(localStorage.getItem(day))
         var sideSlot = document.getElementById("se-"+day)
         var weekSlot = document.getElementById("mp-"+day)
-        sideSlot.innerHTML += `<p class="subtitle"> ${daysRecipe.label} </p>`
-        weekSlot.innerHTML +=         `
+        sideSlot.innerHTML = `<p class="subtitle"> ${daysRecipe.label} </p>`
+        weekSlot.innerHTML =         
+        `
         <div class="box">
             <article class="media">
                 <div class="media-left">
@@ -223,12 +224,33 @@ function updateDay(day) {
             </article>          
         </div>
         `
+        var glSlot = document.getElementById("list-data")
+        var ingredientsArray = daysRecipe.ingredients
+        ingredientsArray.forEach(function(ingredient) {
+            if (ingredient.quantity !== 0)
+            glSlot.innerHTML += 
+            `
+            <tr>
+            <th>${day}</th>
+            <td>${ingredient.food}</td>
+            <td>${ingredient.quantity}</td>
+            <td>${ingredient.measure}</td>
+            <td><input type="checkbox"></td>
+            </tr>
+            `            
+            else if (ingredient.quantity === 0)
+            glSlot.innerHTML += 
+            `
+            <tr>
+            <th>${day}</th>
+            <td>${ingredient.food}</td>
+            <td>To Taste</td>
+            <td>N/A</td>
+            <td><input type="checkbox"></td>
+            </tr>
+            ` 
+            })
         }
     else if (localStorage.getItem(day) === null) return;
 }
 
-// Grocery List Function
-// compile ingredients from all recipes
-// compare ingredients for similar ingredients
-// generate list of ingredients into one column
-// apply quantity in second column

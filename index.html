@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
         <script src="https://kit.fontawesome.com/457a2699b6.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="./assets/style.css" />
+        <link rel="stylesheet" href="./Assets/style.css" />
     </head>
     <body>
         <section class="hero is-small is-primary has-text-centered">
@@ -151,27 +151,26 @@
                     </div>
                 </div>
             </div>
-            <div class="container hidden" id="grocery-list">
-                <div class="columns">
-                    <div class="column box">
-                        <p class="title">Ingredient Name</p>
-                        <div id="ing-name"></div>
-                    </div>
-                    <div class="column box">
-                        <p class="title">Quantity Needed</p>
-                        <div id="ing-qnty"></div>
-                    </div>
-                    <div class="column box">
-                        <p class="title">Checklist</p>
-                        <div id="ing-check"></div>
-                    </div>
-                </div>
+            <div class="container has-text-centered hidden" id="grocery-list">
+                <table class="table is-striped">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Ingrdient</th>
+                            <th>Quantity</th>
+                            <th>Units</th>
+                            <th>Checkbox</th>
+                        </tr>
+                    </thead>
+                    <tbody id="list-data">
+                    </tbody>
+                </table>
             </div>
             <footer class="footer">
                 <p>Made with frustration and love by Dan, Heather, and Keara</p>
             </footer>
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-        <script src="./assets/script.js"></script>
+        <script src="./Assets/script.js"></script>
     </body>
 </html>
