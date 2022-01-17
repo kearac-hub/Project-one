@@ -103,6 +103,23 @@ function generateHTML(results){
                 </div>
             </div>          
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
 <<<<<<< HEAD
         `  
     });
@@ -192,3 +209,5 @@ jokeText.innerHTML = item.joke;
 
 // when next or previous buttons pressed then inject next set of recipe results
 >>>>>>> dev
+
+

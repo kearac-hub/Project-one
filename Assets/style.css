@@ -1,3 +1,188 @@
 .sticky-top {
     top: 0;
-    position: sticky; }
+    position: sticky; 
+  }
+  
+  .body-custom {
+    background-color: rgb(24, 24, 24);
+  }
+  
+  #hero-custom {
+    background-color: #0f1101;
+    
+  }
+  
+  #glenda-img {
+   height: 340px;
+   width: 1024px;
+  }
+  
+  #title-custom {
+    color: black;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Charm', cursive;
+  
+    
+  }
+  
+  #subtitle-custom {
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center  
+  }
+  
+  #nav-bar-custom {
+    background-color: rgb(50, 95, 5);
+  }
+  
+  .nav-bar-btn-custom {
+    background-color: rgb(50, 95, 5);
+    margin: 20px;
+    color: rgba(255, 219, 14, 0.87);
+  }
+  
+  .nav-bar-btn-custom:hover{
+    background-color: rgb(212, 200, 27);
+    padding: 8px;
+    color: black
+  }
+  
+  #joke-custom {
+  background-color: rgb(24, 24, 24);
+  }
+  
+  #joke-text-custom {
+    color: rgb(113, 209, 109)
+  }
+  
+  #jokeButton {
+    background-color:rgb(113, 209, 109);
+    margin: 5px; 
+  }
+  
+  #search-box-custom  {
+  background-color: rgba(255, 219, 14, 0.87);
+  margin: 0 0 0 10px;
+  
+  }
+  
+  #your-recipes-custom {
+    background-color: rgb(190, 231, 188);
+  
+  }
+  /* monday-sunday boxes */
+  .m-s-boxes {
+    background-color:rgba(255, 219, 14, 0.87);
+    padding: 10px;
+    border: solid black 1px;
+    border-radius: 5px;
+    margin: 0 10px 0 0;
+  }
+  
+  .day-of-week {
+    color: black;
+    font-weight: bold;
+  }
+  
+  /* grocery list  */
+  
+  main{
+    background-color: rgb(223, 202, 12);
+  }
+  
+  .container-groceries{
+    width: 95%;
+    margin: auto;
+    display: flex;
+  }
+  
+  #groceries{
+    width: 800px;
+    min-height: 100vh;
+    padding-top: 20px;
+    margin:auto;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(190, 231, 188);
+    box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.50);  
+  }
+  
+  #title-grocery{
+    font-size: 1.25rem;
+    text-align: center;
+    font-weight: bolder;
+  }
+  
+  #input-grocery{
+    width: 75%;
+    display: flex;
+    justify-content: center;
+   
+  }
+  
+  #wand{
+    cursor: pointer;
+    font-size: 2rem;
+    color: black;
+  }
+  
+  #user-input-grocery{
+    outline: 0;
+    border: 0;
+    width: 100%;
+    font-size: 1.5rem;
+    background-color: rgb(190, 231, 188);
+    border-bottom: 3px solid black;
+  }
+  
+  #all_items{
+    font-size: 1.5rem;
+    width: 75%;
+  }
+  
+  @media(max-width:480px){
+    #title-grocery{
+      font-size: 1rem;
+    }
+  
+    #wand{
+      font-size: 1.5rem;
+    }
+  
+    #user-input-grocery{
+      font-size: 1rem;
+    }
+  
+    #all-items{
+      font-size: 1rem;
+    }
+  }
+  
+  
+  /*footer*/
+  #footer-custom {
+    background-color: rgb(50, 95, 5);
+  }
+  
+  #footer-text-custom {
+    color: black;
+    font-weight: bold;
+    padding: 0 8% 0 0;
+  }
+  
+  #footer-text-meal-custom {
+    color: black;
+    font-weight: bold;
+    padding: 0 0 0 35%;
+  }
+  
+  #footer-text-grocery-custom {
+    color: black;
+    font-weight: bold;
+    padding: 0 0 0 35%; 
+  }
