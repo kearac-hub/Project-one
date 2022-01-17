@@ -1,27 +1,9 @@
-//https://api.nal.usda.gov/fdc/v1/foods/search?query=apple&pageSize=2&api_key=0EHCMX3IdKdBAQSS7YUhWhRb5nVMGcakbgl7Pzfa//
-// this is our api from usda food industry
-
-// api key 4417fffcd6216db061ff874b73d3ffadde2f340a for yummly
-// 4417fffcd6216db061ff874b73d3ffadde2f340a
-
-
-// url:`https://api.nal.usda.gov/fdc/v1/foods/search?query=apple&pageSize=2&api_key=0EHCMX3IdKdBAQSS7YUhWhRb5nVMGcakbgl7Pzfa`
-// url:`https://api.spoonacular.com/recipes/complexSearch`
-
-// Spoonacular API Key: 7226009885d74cf5ba75e4d9352df82a
-// ?api_Key=7226009885d74cf5ba75e4d9352df82a
-// url:`https://api.spoonacular.com/recipes/complexSearch?api_Key=7226009885d74cf5ba75e4d9352df82a`
-// https://api.spoonacular.com/recipes/extract?api_Key=7226009885d74cf5ba75e4d9352df82a
-
-// https://api.spoonacular.com/recipes/random?apiKey=7226009885d74cf5ba75e4d9352df82a&number=1
-
 const searchForm = document.querySelector('form');
 const searchResults = document.querySelector('.search-result');
 const container = document.querySelector('.container');
 var searchQuery = ``;
 const APP_ID = `d3e5c6fd`
 const API_KEY = `c628a4d256c9e32f0138ceafb1591933`
-
 
 
 searchForm.addEventListener(`submit`, (e) => {
@@ -36,9 +18,7 @@ async function fetchAPI (){
     generateHTML(data.hits);
     console.log(data);
 }
-
 function generateHTML(results){
-    container.classList.remove('recipe-tile-custom');
     let generatedHTML = ``;
     results.map(result => {
         generatedHTML +=
@@ -103,62 +83,6 @@ function generateHTML(results){
                 </div>
             </div>          
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-<<<<<<< HEAD
-        `  
-    });
-  
-}
-//get item from local storag 7x (donre on page load),  an darray for each day of the week 
-//run next fun sets item into array add to local stor for day 
-// llocalstorag.setitem(dayofweek,json.strigiffy(monarray))
-//if, else state 
-//event lis with event del correct 
-//placeholder in local store
-//list 
-
-//grt valu from title to obj
-
-
-
-//local storage
-// const recipes = JSON.parse(localStorage.getItem("data")) || [];
-
-//        const addRecipe = (label, image, calories,url) => {
-//          recipes.push({
-//            label,
-//            image,
-//            calories,
-//            url,
-//          });
-       
-//          localStorage.setItem("recipes", JSON.stringify(recipes));
-       
-//          return { label,image, calories, url };
-//        }; 
-// define variables
-//listen to the menu to see what user picks(what day is picked)
-//which recipe is clicked
-//what is the key and string "key=day", string=recipe name
-
-//obj - array - 
-=======
         `
     })
     searchResults.innerHTML = generatedHTML;
@@ -207,7 +131,44 @@ console.log(item.joke)
 jokeText.innerHTML = item.joke;
 }
 
-// when next or previous buttons pressed then inject next set of recipe results
->>>>>>> dev
+var groceriesEl = document.getElementsByClassName("groceries")[0];
+var wandEl = document.getElementById("wand");
+var allItemsEl = document.getElementById("all-items");
+var userInputGroceryEl = document.getElementById("user-input-grocery");
+var addBtn = document.querySelector("#add-btn");
+var subBtn = document.querySelector("#sub-btn");
+var qtyGrocery = document.querySelector("#qty-grocery");
 
+addBtn.addEventListener("click", function () {
+  qtyGrocery.value = parseInt(qtyGrocery.value) + 1;
+});
 
+subBtn.addEventListener("click", function () {
+    if (qtyGrocery.value <= 0){
+        qtyGrocery.value = 0;
+    }
+    else {
+        qtyGrocery.value = parseInt(qtyGrocery.value) - 1;
+    }
+});
+
+wandEl.addEventListener("click", function () {
+  allItemsEl.innerHTML = "";
+});
+
+userInputGroceryEl.addEventListener("keydown", function (event) {
+  if (event.key == "Enter") addItem();
+});
+
+function addItem() {
+  var h2 = document.createElement("h2");
+  h2.innerHTML = " " + userInputGroceryEl.value;
+
+  h2.addEventListener("click", function () {
+    h2.style.textDecoration = "line-through";
+  });
+
+  allItemsEl.insertAdjacentElement("beforeend", h2);
+
+  userInputGroceryEl.value = "";
+}
