@@ -110,8 +110,6 @@ function generateHTML(results){
     }
 }
 
-
-
 // joke button
 // fetch(`https://api.humorapi.com/jokes/random?api-key=0d50a753058142d38f0460a1d4ef5de2&include-tags=food&exclude-tags=NSFW,dark`)
 
