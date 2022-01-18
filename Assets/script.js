@@ -24,7 +24,6 @@ const API_KEY = `c628a4d256c9e32f0138ceafb1591933`
 var currentHits;
 
 
-
 searchForm.addEventListener(`submit`, (e) => {
     e.preventDefault();
     searchQuery = e.target.querySelector(`input`).value;
@@ -38,13 +37,8 @@ async function fetchAPI (){
     generateHTML(data.hits);
     console.log(data);
 }
-
 function generateHTML(results){
-
     let generatedHTML = ``; 
-    container.classList.remove('recipe-tile-custom');
-    let generatedHTML = ``;
-
     results.map(result => {
         generatedHTML +=
         `
@@ -108,45 +102,6 @@ function generateHTML(results){
                 </div>
             </div>          
         </div>
-
-        `  
-    });
-  
-}
-//get item from local storag 7x (donre on page load),  an darray for each day of the week 
-//run next fun sets item into array add to local stor for day 
-// llocalstorag.setitem(dayofweek,json.strigiffy(monarray))
-//if, else state 
-//event lis with event del correct 
-//placeholder in local store
-//list 
-
-//grt valu from title to obj
-
-
-
-//local storage
-// const recipes = JSON.parse(localStorage.getItem("data")) || [];
-
-//        const addRecipe = (label, image, calories,url) => {
-//          recipes.push({
-//            label,
-//            image,
-//            calories,
-//            url,
-//          });
-       
-//          localStorage.setItem("recipes", JSON.stringify(recipes));
-       
-//          return { label,image, calories, url };
-//        }; 
-// define variables
-//listen to the menu to see what user picks(what day is picked)
-//which recipe is clicked
-//what is the key and string "key=day", string=recipe name
-
-//obj - array - 
-=======
         `
     })
     searchResults.innerHTML = generatedHTML;
@@ -194,6 +149,7 @@ var item = jokeObj.results[Math.floor(Math.random()*jokeObj.results.length)];
 console.log(item.joke)
 jokeText.innerHTML = item.joke;
 }
+
 // navbar hide and unhide functions
 var rfNaviBtn = document.getElementById("rf-nav");
 var mpNaviBtn = document.getElementById("mp-nav");
@@ -256,8 +212,9 @@ function updateDay(day) {
                 <div class="media-content">
                     <div class="content">
                         <p class="subtitle">${daysRecipe.label}</p>
-                        <p>Cooktime:${daysRecipe.totalTime}</p>
-                        <p>Calories:${daysRecipe.calories.toFixed(0)} Servings:${daysRecipe.yield}</p>
+                        <p>Dish Type: ${daysRecipe.dishType}
+                        <p>Cooktime: ${daysRecipe.totalTime}</p>
+                        <p>Calories: ${daysRecipe.calories.toFixed(0)} Servings:${daysRecipe.yield}</p>
                     </div>
                 </div>
                 <nav class="level">
@@ -298,4 +255,3 @@ function updateDay(day) {
     else if (localStorage.getItem(day) === null) return;
 }
 
-// when next or previous buttons pressed then inject next set of recipe results
