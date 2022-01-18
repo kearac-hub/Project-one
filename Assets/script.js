@@ -212,8 +212,9 @@ function updateDay(day) {
                 <div class="media-content">
                     <div class="content">
                         <p class="subtitle">${daysRecipe.label}</p>
-                        <p>Cooktime:${daysRecipe.totalTime}</p>
-                        <p>Calories:${daysRecipe.calories.toFixed(0)} Servings:${daysRecipe.yield}</p>
+                        <p>Dish Type: ${daysRecipe.dishType}
+                        <p>Cooktime: ${daysRecipe.totalTime}</p>
+                        <p>Calories: ${daysRecipe.calories.toFixed(0)} Servings:${daysRecipe.yield}</p>
                     </div>
                 </div>
                 <nav class="level">
