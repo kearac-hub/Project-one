@@ -30,131 +30,162 @@
             <div class="navbar-menu">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="button is-dark">
+                        <button class="button is-dark" id="home-nav">
+                            <span class="icon">
+                            <i class="fas fa-home"></i>
+                            </span>
+                            <span>Home</span>
+                        </button>
+                        <button class="button is-dark" id="rf-nav">
                             <span class="icon">
                             <i class="fas fa-search"></i>
                             </span>
                             <span>Recipe Finder</span>
-                        </a>                        
-                        <a class="button is-dark">
+                        </button>                        
+                        <button class="button is-dark" id="mp-nav">
                             <span class="icon">
                             <i class="fas fa-calendar-week"></i>
                             </span>
                             <span>Meal Planner</span>
-                        </a>
-                        <a class="button is-dark">
+                        </button>
+                        <button class="button is-dark" id="gl-nav">
                             <span class="icon">
                             <i class="fas fa-list"></i>
                             </span>
                             <span>Grocery List</span>
-                        </a>
-                        <a class="button is-dark">
-                            <span class="icon">
-                            <i class="fas fa-users-cog"></i>
-                            </span>
-                            <span>Settings</span>
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
         </nav>
-        <div>
-            <p>Would you like to hear a joke? <button id="jokeButton">Press for a joke!</button>
-            </p>
-            <p id="joke"></p>
-            <br>
-        </div>
         <div class="has-text-centered">
-        <div class="columns recipe-finder">
-            <div class="column is-one-fifth">
-                <div class="tile is-child box sticky-top">
-                    <p class="title">Search for Recipes:</p>
-                    <form> 
-                        <input type="text" placeholder="Hungry?">
-                    </form>
+            <div id="home-page">
+                <section class="hero is-large is-info">
+                    <div class="hero-body">
+                        <p class="title">Welcome to GLENDA</p>
+                        <p class="subtitle">A helpful tool to find recipes, generate meal plans, and create grocery lists.</p>
+                        <p>
+                            <i class="fas fa-arrow-right"></i> Use the recipe finder to pick recipes and assign them to the days you want to cook them.<br>  
+                            <i class="fas fa-arrow-right"></i> The meal planner will show you the recipes you have chosen with more information.<br>
+                            <i class="fas fa-arrow-right"></i> The grocery list is meant to be used while shopping so you can check off the items as you put them in your cart.</p>
+                    </div>
+                </section>
+            </div>
+            <div class="hidden" id="recipe-finder">
+                <div class="columns" id="recipe-finder">
+                    <div class="column is-one-fifth">
+                        <div class="tile is-child box sticky-top">
+                            <p class="title">Search for Recipes:</p>
+                            <form> 
+                                <input type="text" placeholder="Hungry?">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="column is-half box has-text-centered" id="recipe-results">
+                        <p class="title">Your Recipe Results:</p>
+                        <div class="columns is-multiline search-result" id="searchbox">
+                            <div class="item"></div>
+                        </div>                      
+                    </div>
+                    <div class="column">
+                        <div class="se-week sticky-top">
+                            <div class="tile is-child box">
+                                <p>Monday</p>
+                                <div class="rec-side" id="se-Monday"></div>
+                            </div>
+                            <div class="tile is-child box">
+                                <p>Tuesday</p>
+                                <div class="rec-side" id="se-Tuesday"></div>
+                            </div>
+                            <div class="tile is-child box">
+                                <p>Wednesday</p>
+                                <div class="rec-side" id="se-Wednesday"></div>
+                            </div>
+                            <div class="tile is-child box">
+                                <p>Thursday</p>
+                                <div class="rec-side" id="se-Thursday"></div>
+                            </div>
+                            <div class="tile is-child box">
+                                <p>Friday</p>
+                                <div class="rec-side" id="se-Friday"></div>
+                            </div>
+                            <div class="tile is-child box">
+                                <p>Saturday</p>
+                                <div class="rec-side" id="se-Saturday"></div>
+                            </div>
+                            <div class="tile is-child box">
+                                <p>Sunday</p>
+                                <div class="rec-side" id="se-Sunday"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="column is-half box has-text-centered">
-                <p class="title">Your Recipe Results:</p>
-                <div class="columns is-multiline search-result">
-                    <div class="item"></div>
-                </div>
-                <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-                    <a class="pagination-previous hidden">Previous</a>
-                    <a class="pagination-next">Next page</a>
-                </nav>
-            </div>
-            <div class="column">
-                <div class="sc-week sticky-top">
-                    <div class="tile is-child box monday">
-                        <p>Monday</p>
+            <div class="container hidden" id="meal-planner">
+                <div class="mp-week">
+                    <section class="section">
+                        <p class="title">Monday</p>
+                        <div class="rec-side" id="mp-Monday"></div>
+                    </section>
+                    <div class="section">
+                        <p class="title">Tuesday</p>
+                        <div class="rec-side" id="mp-Tuesday"></div>
                     </div>
-                    <div class="tile is-child box tuesday">
-                        <p>Tuesday</p>
+                    <div class="section">
+                        <p class="title">Wednesday</p>
+                        <div class="rec-side" id="mp-Wednesday"></div>
                     </div>
-                    <div class="tile is-child box wednesday">
-                        <p>Wednesday</p>
+                    <div class="section">
+                        <p class="title">Thursday</p>
+                        <div class="rec-side" id="mp-Thursday"></div>
                     </div>
-                    <div class="tile is-child box thursday">
-                        <p>Thursday</p>
+                    <div class="section">
+                        <p class="title">Friday</p>
+                        <div class="rec-side" id="mp-Friday"></div>
                     </div>
-                    <div class="tile is-child box friday">
-                        <p>Friday</p>
+                    <div class="section">
+                        <p class="title">Saturday</p>
+                        <div class="rec-side" id="mp-Saturday"></div>
                     </div>
-                    <div class="tile is-child box saturday">
-                        <p>Saturday</p>
-                    </div>
-                    <div class="tile is-child box sunday">
-                        <p>Sunday</p>
+                    <div class="section">
+                        <p class="title">Sunday</p>
+                        <div class="rec-side" id="mp-Sunday"></div>
                     </div>
                 </div>
             </div>
+            <div class="container has-text-centered hidden" id="grocery-list">
+                <table class="table is-striped">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Ingrdient</th>
+                            <th>Quantity</th>
+                            <th>Units</th>
+                            <th>Checkbox</th>
+                        </tr>
+                    </thead>
+                    <tbody id="list-data">
+                    </tbody>
+                </table>
+            </div>
+            <article class="media">
+                <div class="media-content">
+                  <div class="content">
+                    <p>
+                      <strong>Would you like to hear a joke?</strong>
+                      <br>
+                      <button class="button is-small is-primary" id="jokeButton">Press for a joke!</button></p>
+                      <span id="joke"></span>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            <footer class="footer">
+                <p>Made with frustration and love by Dan, Heather, and Keara.</p>
+            </footer>
         </div>
-        <div class="container meal-planner">
-            <div class="columns mp-week">
-                <div class="column box is-dark monday">
-                    <p class="title">Monday</p>
-                </div>
-                <div class="column box is-dark tuesday">
-                    <p class="title">Tuesday</p>
-                </div>
-                <div class="column box wednesday">
-                    <p class="title">Wednesday</p>
-                </div>
-                <div class="column box thursday">
-                    <p class="title">Thursday</p>
-                </div>
-                <div class="column box friday">
-                    <p class="title">Friday</p>
-                </div>
-                <div class="column box saturday">
-                    <p class="title">Saturday</p>
-                </div>
-                <div class="column box sunday">
-                    <p class="title">Sunday</p>
-                </div>
-            </div>
-        </div>
-        <div class="container grocery-list">
-            <div class="columns">
-                <div class="column box">
-                    <p class="title">Ingredient Name</p>
-                    <div id="ing-name"></div>
-                </div>
-                <div class="column box">
-                    <p class="title">Quantity Needed</p>
-                    <div id="ing-qnty"></div>
-                </div>
-                <div class="column box">
-                    <p class="title">Checklist</p>
-                    <div id="ing-check"></div>
-                </div>
-            </div>
-        </div>
-        <footer class="footer">
-            <p>Made with frustration and love by Dan, Heather, and Keara</p>
-        </footer>
-        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script src="./Assets/script.js"></script>
     </body>
 </html>

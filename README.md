@@ -14,28 +14,30 @@ This is accomplished in multiple functions:
 - User is allowed to search for recipes using keywords
   - Recipes are displayed with a relevant image, cook and prep time, serving size/        portions, and a link to the cooking instructions
   - User picks recipe(s) and assigns them to a particular day from a dropdown.
-  ![Complex Search Functionality]()
+  
 - User can look at a weekly schedule which shows chosen recipes
   - Recipes are displayed with cook and prep time, nutritional data (cal), and a link to the cooking instructions
   - Serving Size/portions are also show with the ability to increase/decrease
   - Total calories are listed at the end of each day
-  ![Flexible Weekly Meal Planner]()
+  
 - User can look at a generated grocery list
   - Ingredients and quantity needed are listed
   - A checkbox is provided to allow for list usage while shopping
-  ![Custom Generated Grocery List]()
+  ![Demonstration of Site Functionality](./Assets/Project_one_gif.gif)
 
 ## Credits
 -Collaborators
-    a. Danny Phillips [GitHub](https://github.com/DanielGPhillips)
-    b. Keara Cotter [GitHub](https://github.com/kearac-hub)
-    c. Heather Loop [GitHub](https://github.com/hloop132)
+- Danny Phillips [GitHub](https://github.com/DanielGPhillips)
+- Keara Cotter [GitHub](https://github.com/kearac-hub)
+- Heather Loop [GitHub](https://github.com/hloop132)
 
 -Tools Used
-    a. React.JS
-    b. Bulma
-    c. fontawesome
+- Bulma
+- fontawesome
 
 -Other Resources
-    a. (Tutorials?)
-    b. (Other Useful things found)
+- APIs
+  - https://api.humorapi.com/
+  - https://developer.edamam.com/edamam-recipe-api
+- YouTube Tutorials that were helpful:
+  - https://www.youtube.com/watch?v=x8EY0BlhPGk
