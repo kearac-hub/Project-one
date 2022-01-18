@@ -6,9 +6,6 @@
         <meta http-equiv="X-UA Compatible" content="IE-Edge" />                                                                                 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>G.L.E.N.D.A</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Charm:wght@700&family=Luxurious+Roman&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet">
@@ -16,19 +13,14 @@
         <script src="https://kit.fontawesome.com/457a2699b6.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./Assets/style.css" />
     </head>
-
-    <body class="body-custom">
-        <!-- hidden landing [page section not super important-->
-        <section hidden>
-        </section>
-        
+    <body>
         <section class="hero is-small is-primary has-text-centered">
-            <div id="hero-custom" class="hero-body">
-                
-                <img id="glenda-img" src="./Assets/ECCB93E6-B6E5-4810-98EA-D0EBE1F06A8C.jpeg" alt="Granny on a broom"
+            <div class="hero-body">
+                <p class="title">G.L.E.N.D.A, the Good Grocery List</p>
+                <p class="subtitle">Grocery List Export, Nutritional Data Analyst</p>
             </div>            
         </section>
-        <nav id="nav-bar-custom" class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
                     <span aria-hidden="true"></span>
@@ -38,114 +30,155 @@
             </div>
             <div class="navbar-menu">
                 <div class="navbar-item">
-                    <div class="nav-bar-btn-custom" >
+                    <div class="buttons">
+                        <button class="button is-dark" id="rf-nav">
                             <span class="icon">
                             <i class="fas fa-search"></i>
                             </span>
                             <span>Recipe Finder</span>
-                        </div>                       
-                    <div class="nav-bar-btn-custom" >
+                        </button>                        
+                        <button class="button is-dark" id="mp-nav">
                             <span class="icon">
                             <i class="fas fa-calendar-week"></i>
                             </span>
                             <span>Meal Planner</span>
-                        </div>
-                        <div class="nav-bar-btn-custom">
+                        </button>
+                        <button class="button is-dark" id="gl-nav">
                             <span class="icon">
                             <i class="fas fa-list"></i>
                             </span>
                             <span>Grocery List</span>
-                        </div>
+                        </button>
+                        <button class="button is-dark" id="set-nav">
+                            <span class="icon">
+                            <i class="fas fa-users-cog"></i>
+                            </span>
+                            <span>Settings</span>
+                        </button>
                     </div>
                 </div>
             </div>
         </nav>
-
-        <div id="joke-custom">
-            <p id="joke-text-custom">Would you like to hear a joke? <button id="jokeButton">Press for a joke!</button>
+        <div>
+            <p>Would you like to hear a joke? <button id="jokeButton">Press for a joke!</button>
             </p>
             <p id="joke"></p>
             <br>
         </div>
-
-        <!-- recipe finder section  -->
         <div class="has-text-centered">
-        <div class="columns recipe-finder">
-            <div class="column is-one-fifth">
-                <div id="search-box-custom" class="tile is-child box sticky-top">
-                    <p class="title">Search for Recipes:</p>
-                    <form> 
-                        <input type="text" placeholder="Hungry?">
-                    </form>
+            <div id="recipe-finder">
+                <div class="columns" id="recipe-finder">
+                    <div class="column is-one-fifth">
+                        <div class="tile is-child box sticky-top">
+                            <p class="title">Search for Recipes:</p>
+                            <form> 
+                                <input type="text" placeholder="Hungry?">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="column is-half box has-text-centered" id="recipe-results">
+                        <p class="title">Your Recipe Results:</p>
+                        <div class="columns is-multiline search-result" id="searchbox">
+                            <div class="item"></div>
+                        </div>
+                        <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+                            <a class="pagination-previous hidden">Previous</a>
+                            <a class="pagination-next">Next page</a>
+                        </nav>                        
+                    </div>
+                    <div class="column">
+                        <div class="se-week sticky-top">
+                            <div class="tile is-child box">
+                                <p>Monday</p>
+                                <div class="rec-side" id="se-Monday"></div>
+                            </div>
+                            <div class="tile is-child box">
+                                <p>Tuesday</p>
+                                <div class="rec-side" id="se-Tuesday"></div>
+                            </div>
+                            <div class="tile is-child box">
+                                <p>Wednesday</p>
+                                <div class="rec-side" id="se-Wednesday"></div>
+                            </div>
+                            <div class="tile is-child box">
+                                <p>Thursday</p>
+                                <div class="rec-side" id="se-Thursday"></div>
+                            </div>
+                            <div class="tile is-child box">
+                                <p>Friday</p>
+                                <div class="rec-side" id="se-Friday"></div>
+                            </div>
+                            <div class="tile is-child box">
+                                <p>Saturday</p>
+                                <div class="rec-side" id="se-Saturday"></div>
+                            </div>
+                            <div class="tile is-child box">
+                                <p>Sunday</p>
+                                <div class="rec-side" id="se-Sunday"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="your-recipes-custom" class="column is-half box has-text-centered">
-                <p class="title">Your Recipe Results:</p>
-                <div class="columns is-multiline search-result">
-                    <div class="item"></div>
-                </div>
-                <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-                    <a class="pagination-previous hidden">Previous</a>
-                    <a class="pagination-next">Next page</a>
-                </nav>
-            </div>
-            <div class="column">
-                <div class="sc-week sticky-top">
-                    <div class="m-s-boxes" class="tile is-child box monday">
-                        <p class="day-of-week">Monday</p>
+            <div class="container hidden" id="meal-planner">
+                <div class="mp-week">
+                    <section class="section">
+                        <p class="title">Monday</p>
+                        <div class="rec-side" id="mp-Monday"></div>
+                    </section>
+                    <div class="section">
+                        <p class="title">Tuesday</p>
+                        <div class="rec-side" id="mp-Tuesday"></div>
                     </div>
-                    <div class="m-s-boxes" class="tile is-child box tuesday">
-                        <p class="day-of-week" >Tuesday</p>
+                    <div class="section">
+                        <p class="title">Wednesday</p>
+                        <div class="rec-side" id="mp-Wednesday"></div>
                     </div>
-                    <div class="m-s-boxes"
-                    class="tile is-child box wednesday">
-                        <p class="day-of-week" >Wednesday</p>
+                    <div class="section">
+                        <p class="title">Thursday</p>
+                        <div class="rec-side" id="mp-Thursday"></div>
                     </div>
-                    <div class="m-s-boxes" class="tile is-child box thursday">
-                        <p class="day-of-week" >Thursday</p>
+                    <div class="section">
+                        <p class="title">Friday</p>
+                        <div class="rec-side" id="mp-Friday"></div>
                     </div>
-                    <div class="m-s-boxes" class="tile is-child box friday">
-                        <p class="day-of-week" >Friday</p>
+                    <div class="section">
+                        <p class="title">Saturday</p>
+                        <div class="rec-side" id="mp-Saturday"></div>
                     </div>
-                    <div class="m-s-boxes" class="tile is-child box saturday">
-                        <p class="day-of-week" >Saturday</p>
-                    </div>
-                    <div class="m-s-boxes" class="tile is-child box sunday">
-                        <p class="day-of-week" >Sunday</p>
+                    <div class="section">
+                        <p class="title">Sunday</p>
+                        <div class="rec-side" id="mp-Sunday"></div>
                     </div>
                 </div>
             </div>
+            <div class="container has-text-centered hidden" id="grocery-list">
+                <table class="table is-striped">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Ingrdient</th>
+                            <th>Quantity</th>
+                            <th>Units</th>
+                            <th>Checkbox</th>
+                        </tr>
+                    </thead>
+                    <tbody id="list-data">
+                    </tbody>
+                </table>
+            </div>
+            <footer class="footer">
+                <p>Made with frustration and love by Dan, Heather, and Keara</p>
+            </footer>
         </div>
 
-        <!-- in mealPlan.html with <a> tag-->
-        
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
-        <!-- in groceryList.html with <a> tag --><main>
-    <div class="container-groceries">
-        <div id="groceries">
-          <div id="title-grocery">
-            <h1>Grocery List</h1>
-          </div>
-          <div id="input-grocery">
-            <i id="wand" class="fas fa-magic"></i>
-            <input id="user-input-grocery">
-            <!--add and sub buttons-->
-            <button class="add-sub-btn"
-            id="add-btn">+</button>
-            <input type="text" readonly="" name="qty-grocery" id="qty-grocery" value="0">
-            <button class="add-sub-btn" id="sub-btn">-</button>
-          </div>
-          <div id="all_items"></div>
+        <footer class="footer">
+            <p>Made with frustration and love by Dan, Heather, and Keara</p>
+        </footer>
         </div>
-      </div>
-    </main>
 
-
-            <div>
-                <footer id="footer-custom" class="footer">
-                <p id="footer-text-custom">Made with frustration and love by Dan, Heather, and Keara &#128406</p>
-               </footer>
-            </div>
-            <script src="Assets/script.js"></script>
-    </body> 
-</html>
+        <script src="./Assets/script.js"></script>
+    </body>
+</ht

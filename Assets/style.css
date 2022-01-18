@@ -140,6 +140,7 @@
     border-bottom: 3px solid black;
   }
   
+
 #qty-grocery {
     display: flex;
     align-items: center;
@@ -166,10 +167,23 @@
       font-size: 1rem;
     }
   
+
     #all-items{
       font-size: 1rem;
     }
   }
+    #qty-grocery {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 10%;
+  
+  }
+  
+    #all-items{
+      font-size: 1rem;
+    }
+  
   
   
   /*footer*/
