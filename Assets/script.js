@@ -1,20 +1,3 @@
-//https://api.nal.usda.gov/fdc/v1/foods/search?query=apple&pageSize=2&api_key=0EHCMX3IdKdBAQSS7YUhWhRb5nVMGcakbgl7Pzfa//
-// this is our api from usda food industry
-
-// api key 4417fffcd6216db061ff874b73d3ffadde2f340a for yummly
-// 4417fffcd6216db061ff874b73d3ffadde2f340a
-
-
-// url:`https://api.nal.usda.gov/fdc/v1/foods/search?query=apple&pageSize=2&api_key=0EHCMX3IdKdBAQSS7YUhWhRb5nVMGcakbgl7Pzfa`
-// url:`https://api.spoonacular.com/recipes/complexSearch`
-
-// Spoonacular API Key: 7226009885d74cf5ba75e4d9352df82a
-// ?api_Key=7226009885d74cf5ba75e4d9352df82a
-// url:`https://api.spoonacular.com/recipes/complexSearch?api_Key=7226009885d74cf5ba75e4d9352df82a`
-// https://api.spoonacular.com/recipes/extract?api_Key=7226009885d74cf5ba75e4d9352df82a
-
-// https://api.spoonacular.com/recipes/random?apiKey=7226009885d74cf5ba75e4d9352df82a&number=1
-
 const searchForm = document.querySelector('form');
 const searchResults = document.querySelector('.search-result');
 const container = document.querySelector('.container');
@@ -154,27 +137,38 @@ jokeText.innerHTML = item.joke;
 var rfNaviBtn = document.getElementById("rf-nav");
 var mpNaviBtn = document.getElementById("mp-nav");
 var glNaviBtn = document.getElementById("gl-nav");
-var setNaviBtn = document.getElementById("set-nav");
+var homeNaviBtn = document.getElementById("home-nav");
 var rfSection = document.getElementById("recipe-finder");
 var mpSection = document.getElementById("meal-planner");
-var glSection = document.getElementById("grocery-list")
+var glSection = document.getElementById("grocery-list");
+var homeSection = document.getElementById("home-page")
+
+homeNaviBtn.addEventListener('click', function(e) {
+    homeSection.classList.remove('hidden');
+    rfSection.classList.add('hidden');
+    mpSection.classList.add('hidden');
+    glSection.classList.add('hidden');
+})
 
 mpNaviBtn.addEventListener('click', function(e) {
     rfSection.classList.add('hidden');
     mpSection.classList.remove('hidden');
     glSection.classList.add('hidden');
+    homeSection.classList.add('hidden');
 })
 
 rfNaviBtn.addEventListener('click', function(e) {
     rfSection.classList.remove('hidden');
     mpSection.classList.add('hidden');
     glSection.classList.add('hidden');
+    homeSection.classList.add('hidden');
 })
 
 glNaviBtn.addEventListener('click', function(e) {
     rfSection.classList.add('hidden');
     mpSection.classList.add('hidden');
     glSection.classList.remove('hidden');
+    homeSection.classList.add('hidden');
 })
 
 // meal planner local storage injection
